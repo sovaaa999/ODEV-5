@@ -1,145 +1,198 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOVA Web Ajans</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOVA - Web Ajansı</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="logo" href="#home" aria-label="SOVA Ana Sayfa">SOVA</a>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="logo">SOVA</div>
+      <ul class="nav-links" aria-label="Site menüsü">
+        <li><a href="#home">Ana Sayfa</a></li>
+        <li><a href="#about">Hakkımızda</a></li>
+        <li><a href="#services">Hizmetler</a></li>
+        <li><a href="#contact">İletişim</a></li>
+      </ul>
 
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <a class="login-btn" href="#contact">Giriş Yap</a>
+    </nav>
+  </header>
 
-    <ul class="nav-links" id="menu">
-        <li><a href="#">Ana Sayfa</a></li>
-        <li><a href="#">Hakkımızda</a></li>
-        <li><a href="#">Hizmetler</a></li>
-        <li><a href="#">İletişim</a></li>
-    </ul>
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1>Markanıza özel modern web siteleri</h1>
+          <p>SOVA olarak işletmenize uygun, hızlı ve mobil uyumlu tek sayfalık web sitesi çözümleri sunuyoruz.</p>
 
-    <button class="login-btn">Giriş Yap</button>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-text">
-        <h1>SOVA ile Dijital Gücünüzü Artırın</h1>
-        <p>Modern, hızlı ve kullanıcı dostu web siteleri tasarlıyoruz.</p>
-
-        <div class="hero-buttons">
-            <button class="btn">Keşfet</button>
-            <button class="btn secondary">Daha Fazla</button>
-        </div>
-    </div>
-
-    <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="">
-    </div>
-</section>
-
-<!-- FEATURES -->
-<section class="features">
-    <div class="card">
-        <h2>⚡ Hızlı</h2>
-        <p>Yüksek performanslı siteler.</p>
-    </div>
-
-    <div class="card">
-        <h2>🎨 Tasarım</h2>
-        <p>Modern ve dikkat çekici arayüz.</p>
-    </div>
-
-    <div class="card">
-        <h2>🔒 Güvenli</h2>
-        <p>Veri güvenliği önceliğimiz.</p>
-    </div>
-</section>
-
-<!-- SERVICES -->
-<section class="services">
-
-    <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" alt="">
-        <h3>Web Tasarım</h3>
-        <p>Profesyonel siteler</p>
-        <button onclick="openModal('Web Tasarım','Modern web siteleri yapıyoruz')">Detaylar</button>
-    </div>
-
-    <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="">
-        <h3>SEO</h3>
-        <p>Google’da yükselin</p>
-        <button onclick="openModal('SEO','Sitenizi Google’da üst sıralara çıkarıyoruz')">Detaylar</button>
-    </div>
-
-    <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4" alt="">
-        <h3>Yazılım</h3>
-        <p>Özel çözümler</p>
-        <button onclick="openModal('Yazılım','Özel yazılım geliştiriyoruz')">Detaylar</button>
-    </div>
-
-    <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72" alt="">
-        <h3>Destek</h3>
-        <p>7/24 hizmet</p>
-        <button onclick="openModal('Destek','7/24 teknik destek sağlıyoruz')">Detaylar</button>
-    </div>
-
-</section>
-
-<!-- MODAL -->
-<div class="modal" id="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2 id="modal-title"></h2>
-        <p id="modal-text"></p>
-    </div>
-</div>
-
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="footer-container">
-        <div>
-            <h3>SOVA Hakkında</h3>
-            <p>Dijital dünyada güçlü çözümler sunuyoruz.</p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#features">Keşfet</a>
+            <a class="btn btn-secondary" href="#services">Daha Fazla</a>
+          </div>
         </div>
 
-        <div>
-            <h3>Hızlı Linkler</h3>
-            <p>Ana Sayfa</p>
-            <p>Hizmetler</p>
+        <div class="hero-image">
+          <img
+            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='560' height='360'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop stop-color='%232563eb'/><stop offset='1' stop-color='%238b5cf6'/></linearGradient></defs><rect width='100%25' height='100%25' fill='url(%23g)'/><circle cx='420' cy='110' r='70' fill='rgba(255,255,255,0.18)'/><circle cx='150' cy='250' r='90' fill='rgba(255,255,255,0.14)'/><text x='40' y='190' font-family='Arial' font-size='34' fill='white' font-weight='700'>SOVA</text><text x='40' y='225' font-family='Arial' font-size='18' fill='white' opacity='0.9'>Modern%20Web%20Cozumleri</text></svg>"
+            alt="Web tasarım örnek görseli"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container">
+        <h2>Özellikler</h2>
+
+        <div class="features-container">
+          <div class="feature-card">
+            <div class="icon" aria-hidden="true">🚀</div>
+            <h3>Hızlı</h3>
+            <p>Performans odaklı yapı ile ziyaretçileriniz daha akıcı bir deneyim yaşar.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon" aria-hidden="true">🔒</div>
+            <h3>Güvenli</h3>
+            <p>Temel güvenlik prensipleriyle verilerinizi ve sitenizi korumaya önem veririz.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon" aria-hidden="true">💡</div>
+            <h3>Yenilikçi</h3>
+            <p>Modern tasarım trendleriyle markanızı güncel ve güçlü gösteririz.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container about-inner">
+        <div class="about-content">
+          <h2>Hakkımızda</h2>
+          <p>Web sitesi yapan bir şirketin tanıtımı için hazırlanmış tek sayfalık bir örnek projedir. Amacımız, markalara sade ve etkili bir dijital vitrin sunmaktır.</p>
+          <ul class="about-list" aria-label="Kısa bilgiler">
+            <li>✅ Mobil uyumlu tasarım</li>
+            <li>✅ Temiz ve anlaşılır arayüz</li>
+            <li>✅ Hızlı teslim ve destek</li>
+          </ul>
         </div>
 
-        <div>
-            <h3>İletişim</h3>
-            <p>info@sova.com</p>
+        <div class="about-box" aria-label="Kısa özet">
+          <h3>Çalışma Şeklimiz</h3>
+          <p>İhtiyacı dinleriz, tasarımı hazırlarız, yayına alırız.</p>
         </div>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="container">
+        <h2>Hizmetler</h2>
+
+        <div class="services-container">
+          <div class="service-card">
+            <img
+              src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='420' height='260'><rect width='100%25' height='100%25' fill='%23e0f2fe'/><circle cx='320' cy='90' r='68' fill='%2338bdf8' opacity='0.35'/><rect x='36' y='52' width='190' height='18' rx='9' fill='%230ea5e9' opacity='0.75'/><rect x='36' y='90' width='250' height='14' rx='7' fill='%230ea5e9' opacity='0.5'/><rect x='36' y='120' width='220' height='14' rx='7' fill='%230ea5e9' opacity='0.35'/><rect x='36' y='160' width='140' height='36' rx='10' fill='%230ea5e9'/><text x='54' y='184' font-family='Arial' font-size='16' fill='white' font-weight='700'>Tasarım</text></svg>"
+              alt="Web tasarımı görseli"
+            />
+            <h3>Web Tasarımı</h3>
+            <p>Modern ve kullanıcı dostu arayüzler.</p>
+            <button class="btn-details" type="button">Detaylar</button>
+          </div>
+
+          <div class="service-card">
+            <img
+              src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='420' height='260'><rect width='100%25' height='100%25' fill='%23ecfccb'/><circle cx='320' cy='90' r='68' fill='%2384cc16' opacity='0.35'/><path d='M70 170 L120 130 L160 150 L210 110 L260 120' fill='none' stroke='%2365a30d' stroke-width='10' stroke-linecap='round' stroke-linejoin='round'/><circle cx='260' cy='120' r='10' fill='%2365a30d'/><text x='36' y='82' font-family='Arial' font-size='20' fill='%233f6212' font-weight='800'>SEO</text><text x='36' y='110' font-family='Arial' font-size='14' fill='%233f6212' opacity='0.8'>Arama görünürlüğü</text></svg>"
+              alt="SEO görseli"
+            />
+            <h3>SEO Optimizasyonu</h3>
+            <p>Arama motorlarında daha görünür olun.</p>
+            <button class="btn-details" type="button">Detaylar</button>
+          </div>
+
+          <div class="service-card">
+            <img
+              src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='420' height='260'><rect width='100%25' height='100%25' fill='%23fae8ff'/><circle cx='320' cy='90' r='68' fill='%23c084fc' opacity='0.35'/><rect x='60' y='80' width='210' height='140' rx='18' fill='%23a855f7' opacity='0.15'/><path d='M80 120 H250 L235 190 H100 Z' fill='%23a855f7' opacity='0.9'/><circle cx='120' cy='200' r='10' fill='%23701a75'/><circle cx='210' cy='200' r='10' fill='%23701a75'/><text x='36' y='82' font-family='Arial' font-size='20' fill='%23581c87' font-weight='800'>E-Ticaret</text></svg>"
+              alt="E-ticaret görseli"
+            />
+            <h3>E-Ticaret</h3>
+            <p>Ürünlerinizi online olarak satışa çıkarın.</p>
+            <button class="btn-details" type="button">Detaylar</button>
+          </div>
+
+          <div class="service-card">
+            <img
+              src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='420' height='260'><rect width='100%25' height='100%25' fill='%23ffe4e6'/><circle cx='320' cy='90' r='68' fill='%23fb7185' opacity='0.35'/><rect x='150' y='60' width='120' height='170' rx='18' fill='%23fb7185'/><rect x='162' y='84' width='96' height='112' rx='10' fill='%23fff1f2'/><circle cx='210' cy='212' r='8' fill='%23fff1f2'/><text x='36' y='82' font-family='Arial' font-size='20' fill='%239f1239' font-weight='800'>Mobil</text><text x='36' y='110' font-family='Arial' font-size='14' fill='%239f1239' opacity='0.8'>Uygulama</text></svg>"
+              alt="Mobil uygulama görseli"
+            />
+            <h3>Mobil Uygulamalar</h3>
+            <p>iOS ve Android için temel çözümler.</p>
+            <button class="btn-details" type="button">Detaylar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container contact-inner">
+        <div class="contact-info">
+          <h2>İletişim</h2>
+          <p>Teklif almak veya soru sormak için bize ulaşabilirsiniz.</p>
+          <p><strong>Email:</strong> info@sova.com</p>
+          <p><strong>Tel:</strong> 0 (555) 123 45 67</p>
+          <p><strong>Adres:</strong> İstanbul / Türkiye</p>
+        </div>
+
+        <form class="contact-form" aria-label="İletişim formu">
+          <label>
+            Ad Soyad
+            <input type="text" name="name" placeholder="Adınız" required />
+          </label>
+          <label>
+            E-posta
+            <input type="email" name="email" placeholder="ornek@mail.com" required />
+          </label>
+          <label>
+            Mesaj
+            <textarea name="message" rows="4" placeholder="Mesajınız" required></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Gönder</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-column">
+        <h4>Hakkımızda</h4>
+        <p>SOVA, tek sayfalık modern web sitesi çözümleri sunan örnek bir ajans sitesidir.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Hızlı Linkler</h4>
+        <ul>
+          <li><a href="#home">Ana Sayfa</a></li>
+          <li><a href="#about">Hakkımızda</a></li>
+          <li><a href="#services">Hizmetler</a></li>
+          <li><a href="#contact">İletişim</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>İletişim</h4>
+        <p>Email: info@sova.com</p>
+        <p>Tel: 0 (555) 123 45 67</p>
+      </div>
     </div>
 
-    <p class="copy">© 2026 SOVA - Tüm hakları saklıdır</p>
-</footer>
-
-<!-- JS -->
-<script>
-function toggleMenu(){
-    document.getElementById("menu").classList.toggle("active");
-}
-
-function openModal(title, text){
-    document.getElementById("modal").style.display = "flex";
-    document.getElementById("modal-title").innerText = title;
-    document.getElementById("modal-text").innerText = text;
-}
-
-function closeModal(){
-    document.getElementById("modal").style.display = "none";
-}
-</script>
-
+    <div class="footer-bottom">
+      <p>&copy; 2026 SOVA. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
 </body>
 </html>
