@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOVA Web Ajans</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">SOVA</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="menu">
+        <li><a href="#">Ana Sayfa</a></li>
+        <li><a href="#">Hakkımızda</a></li>
+        <li><a href="#">Hizmetler</a></li>
+        <li><a href="#">İletişim</a></li>
+    </ul>
+
+    <button class="login-btn">Giriş Yap</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>SOVA ile Dijital Gücünüzü Artırın</h1>
+        <p>Modern, hızlı ve kullanıcı dostu web siteleri tasarlıyoruz.</p>
+
+        <div class="hero-buttons">
+            <button class="btn">Keşfet</button>
+            <button class="btn secondary">Daha Fazla</button>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="">
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+    <div class="card">
+        <h2>⚡ Hızlı</h2>
+        <p>Yüksek performanslı siteler.</p>
+    </div>
+
+    <div class="card">
+        <h2>🎨 Tasarım</h2>
+        <p>Modern ve dikkat çekici arayüz.</p>
+    </div>
+
+    <div class="card">
+        <h2>🔒 Güvenli</h2>
+        <p>Veri güvenliği önceliğimiz.</p>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+
+    <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" alt="">
+        <h3>Web Tasarım</h3>
+        <p>Profesyonel siteler</p>
+        <button onclick="openModal('Web Tasarım','Modern web siteleri yapıyoruz')">Detaylar</button>
+    </div>
+
+    <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="">
+        <h3>SEO</h3>
+        <p>Google’da yükselin</p>
+        <button onclick="openModal('SEO','Sitenizi Google’da üst sıralara çıkarıyoruz')">Detaylar</button>
+    </div>
+
+    <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4" alt="">
+        <h3>Yazılım</h3>
+        <p>Özel çözümler</p>
+        <button onclick="openModal('Yazılım','Özel yazılım geliştiriyoruz')">Detaylar</button>
+    </div>
+
+    <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72" alt="">
+        <h3>Destek</h3>
+        <p>7/24 hizmet</p>
+        <button onclick="openModal('Destek','7/24 teknik destek sağlıyoruz')">Detaylar</button>
+    </div>
+
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-text"></p>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div>
+            <h3>SOVA Hakkında</h3>
+            <p>Dijital dünyada güçlü çözümler sunuyoruz.</p>
+        </div>
+
+        <div>
+            <h3>Hızlı Linkler</h3>
+            <p>Ana Sayfa</p>
+            <p>Hizmetler</p>
+        </div>
+
+        <div>
+            <h3>İletişim</h3>
+            <p>info@sova.com</p>
+        </div>
+    </div>
+
+    <p class="copy">© 2026 SOVA - Tüm hakları saklıdır</p>
+</footer>
+
+<!-- JS -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+
+function openModal(title, text){
+    document.getElementById("modal").style.display = "flex";
+    document.getElementById("modal-title").innerText = title;
+    document.getElementById("modal-text").innerText = text;
+}
+
+function closeModal(){
+    document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
